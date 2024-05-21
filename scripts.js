@@ -182,5 +182,25 @@ document.addEventListener('DOMContentLoaded', function() {
             borderWidth: 1,
             barPercentage: 0.4,
             categoryPercentage: 0.5
-        }];
+        }
+    ];
+
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: datasets
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    stacked: true
+                },
+                y: {
+                    stacked: true
+                }
+            }
+        }
+    });
 });
